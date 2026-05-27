@@ -1,16 +1,3 @@
-const initFadeIn = () => {
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('mtr-visible');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.mtr-fade-in').forEach((el) => io.observe(el));
-};
-
 const initTabs = () => {
   const buttons = document.querySelectorAll('.mtr-b2b-section .mtr-tab-btn');
   const panels = document.querySelectorAll('.mtr-b2b-section .mtr-tab-panel');
@@ -32,13 +19,8 @@ const initTabs = () => {
   });
 };
 
-const init = () => {
-  initFadeIn();
-  initTabs();
-};
-
 if ('requestIdleCallback' in window) {
-  requestIdleCallback(init, { timeout: 200 });
+  requestIdleCallback(initTabs, { timeout: 200 });
 } else {
-  document.addEventListener('DOMContentLoaded', init);
+  document.addEventListener('DOMContentLoaded', initTabs);
 }

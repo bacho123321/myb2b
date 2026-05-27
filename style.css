@@ -1230,18 +1230,6 @@ a {
   margin-bottom: var(--mtr-sp-3);
 }
 
-/* ═══════════════════════════════════ ANIMATIONS ═══════════════════════════════════ */
-.mtr-fade-in {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
-}
-
-.mtr-fade-in.mtr-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* ═══════════════════════════════════ SCROLLBAR ═══════════════════════════════════ */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
