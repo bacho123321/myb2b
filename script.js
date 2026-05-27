@@ -1,4 +1,4 @@
-const initUi = () => {
+const initFadeIn = () => {
   const io = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -9,31 +9,36 @@ const initUi = () => {
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.fade-in').forEach((el) => io.observe(el));
+};
 
-  const loginBtn = document.getElementById('loginBtn');
-  const popupOverlay = document.getElementById('popupOverlay');
-  const popupClose = document.getElementById('popupClose');
+const initTabs = () => {
+  const buttons = document.querySelectorAll('.b2b-section .tab-btn');
+  const panels = document.querySelectorAll('.b2b-section .tab-panel');
 
-  if (!loginBtn || !popupOverlay || !popupClose) {
-    return;
-  }
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      buttons.forEach((btn) => {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-selected', 'false');
+      });
+      panels.forEach((panel) => panel.classList.remove('active'));
 
-  loginBtn.addEventListener('click', () => popupOverlay.classList.add('active'));
-  popupClose.addEventListener('click', () => popupOverlay.classList.remove('active'));
-  popupOverlay.addEventListener('click', (e) => {
-    if (e.target === popupOverlay) {
-      popupOverlay.classList.remove('active');
-    }
-  });
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      popupOverlay.classList.remove('active');
-    }
+      button.classList.add('active');
+      button.setAttribute('aria-selected', 'true');
+
+      const targetPanel = document.getElementById(button.getAttribute('data-tab'));
+      if (targetPanel) targetPanel.classList.add('active');
+    });
   });
 };
 
+const init = () => {
+  initFadeIn();
+  initTabs();
+};
+
 if ('requestIdleCallback' in window) {
-  requestIdleCallback(initUi, { timeout: 200 });
+  requestIdleCallback(init, { timeout: 200 });
 } else {
-  document.addEventListener('DOMContentLoaded', initUi);
+  document.addEventListener('DOMContentLoaded', init);
 }
