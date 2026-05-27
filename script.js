@@ -2,32 +2,32 @@ const initFadeIn = () => {
   const io = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        entry.target.classList.add('mtr-visible');
         io.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.fade-in').forEach((el) => io.observe(el));
+  document.querySelectorAll('.mtr-fade-in').forEach((el) => io.observe(el));
 };
 
 const initTabs = () => {
-  const buttons = document.querySelectorAll('.b2b-section .tab-btn');
-  const panels = document.querySelectorAll('.b2b-section .tab-panel');
+  const buttons = document.querySelectorAll('.mtr-b2b-section .mtr-tab-btn');
+  const panels = document.querySelectorAll('.mtr-b2b-section .mtr-tab-panel');
 
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
       buttons.forEach((btn) => {
-        btn.classList.remove('active');
+        btn.classList.remove('mtr-active');
         btn.setAttribute('aria-selected', 'false');
       });
-      panels.forEach((panel) => panel.classList.remove('active'));
+      panels.forEach((panel) => panel.classList.remove('mtr-active'));
 
-      button.classList.add('active');
+      button.classList.add('mtr-active');
       button.setAttribute('aria-selected', 'true');
 
       const targetPanel = document.getElementById(button.getAttribute('data-tab'));
-      if (targetPanel) targetPanel.classList.add('active');
+      if (targetPanel) targetPanel.classList.add('mtr-active');
     });
   });
 };
