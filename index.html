@@ -1,0 +1,916 @@
+<!doctype html>
+<html lang="ka">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MATARE B2B — კორპორატიული მოგზაურობის მართვა</title>
+  <meta name="description" content="კორპორატიული ავიაბილეთები, სასტუმროები, ტრანსფერები და ფინანსური კონტროლი — MATARE B2B პლატფორმა ბიზნესისთვის საქართველოში." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Karla:wght@300;400;500;700&display=swap"
+    as="style" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Karla:wght@300;400;500;700&display=swap" />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ── LOGIN POPUP ── -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-box">
+      <button class="popup-close" id="popupClose">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M3 3l10 10M13 3L3 13" />
+        </svg>
+      </button>
+      <h3 class="popup-title">სისტემაში შესვლა</h3>
+      <div class="form-group">
+        <label>ელ-ფოსტა</label>
+        <input type="email" placeholder="corporate@company.ge" />
+      </div>
+      <div class="form-group">
+        <label>პაროლი</label>
+        <input type="password" placeholder="••••••••" />
+      </div>
+      <button class="btn-primary full-w mt-sm">შესვლა
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M3 8h10M9 4l4 4-4 4" />
+        </svg>
+      </button>
+      <p class="popup-hint">პაროლი დაგავიწყდათ? <a href="#contact">დაგვიკავშირდით</a></p>
+    </div>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-label">CORPORATE TRAVEL PLATFORM</div>
+      <h1 class="hero-title">
+        MATARE.GE<br /><span>ბიზნესისთვის</span>
+      </h1>
+      <p class="hero-desc">
+        MATARE.GE B2B აერთიანებს ავიაბილეთებს, სასტუმროებს, ტრანსფერებს, ვიზებს და ფინანსურ კონტროლს ერთ კორპორატიულ სისტემაში. გამოყოფილი ექაუნთ მენეჯერი, სწრაფი რეაგირება და სრული სამგზავრო პროცესის მართვა — თქვენი კომპანიისთვის.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">კონსულტაცია</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat">
+          <strong>500+</strong>
+          <span>ავიაკომპანია</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <strong>1500+</strong>
+          <span>სასტუმრო</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <strong>24/7</strong>
+          <span>მხარდაჭერა</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <strong>98%</strong>
+          <span>კმაყოფილი მომხმარებელი</span>
+        </div>
+      </div>
+    </div>
+    <div class="contact-right fade-in visible">
+      <h3>მიიღეთ კორპორატიული შეთავაზება</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>კომპანია</label>
+          <input type="text" placeholder="კომპანიის დასახელება" />
+        </div>
+        <div class="form-group">
+          <label>საკონტაქტო პირი</label>
+          <input type="text" placeholder="სახელი და გვარი" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>ელ-ფოსტა</label>
+          <input type="email" placeholder="corporate@company.ge" />
+        </div>
+        <div class="form-group">
+          <label>ტელეფონი</label>
+          <input type="tel" placeholder="+995 5XX XXX XXX" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>შენიშვნა</label>
+        <textarea placeholder="მიუთითეთ თანამშრომლების რაოდენობა, ფრენების სიხშირე, მიმართულებები ან მიმდინარე გამოწვევები"></textarea>
+      </div>
+      <button class="btn-primary full-w">გაგზავნა
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M3 8h10M9 4l4 4-4 4" />
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ── TICKER ── -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <div class="ticker-item">
+        <svg class="tdot" viewBox="0 0 8 8">
+          <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" transform="rotate(45 4 4)" />
+        </svg>
+        ავიაბილეთები
+      </div>
+      <div class="ticker-item">
+        <svg class="tdot" viewBox="0 0 8 8">
+          <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" transform="rotate(45 4 4)" />
+        </svg>
+        სასტუმრო
+      </div>
+      <div class="ticker-item">
+        <svg class="tdot" viewBox="0 0 8 8">
+          <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" transform="rotate(45 4 4)" />
+        </svg>
+        ბიზნეს მოგზაურობა
+      </div>
+      <div class="ticker-item">
+        <svg class="tdot" viewBox="0 0 8 8">
+          <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" transform="rotate(45 4 4)" />
+        </svg>
+        ტრანსფერი
+      </div>
+      <div class="ticker-item">
+        <svg class="tdot" viewBox="0 0 8 8">
+          <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" transform="rotate(45 4 4)" />
+        </svg>
+        MICE სერვისი
+      </div>
+      <div class="ticker-item">
+        <svg class="tdot" viewBox="0 0 8 8">
+          <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" transform="rotate(45 4 4)" />
+        </svg>
+        ჯგუფური ტური
+      </div>
+      <div class="ticker-item">
+        <svg class="tdot" viewBox="0 0 8 8">
+          <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" transform="rotate(45 4 4)" />
+        </svg>
+        ვიზა &amp; დაზღვევა
+      </div>
+      <div class="ticker-item">
+        <svg class="tdot" viewBox="0 0 8 8">
+          <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" transform="rotate(45 4 4)" />
+        </svg>
+        ბიზნეს კლასი
+      </div>
+      <div class="ticker-item">
+        <svg class="tdot" viewBox="0 0 8 8">
+          <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" transform="rotate(45 4 4)" />
+        </svg>
+        ავიაბილეთები
+      </div>
+      <div class="ticker-item">
+        <svg class="tdot" viewBox="0 0 8 8">
+          <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" transform="rotate(45 4 4)" />
+        </svg>
+        სასტუმრო
+      </div>
+      <div class="ticker-item">
+        <svg class="tdot" viewBox="0 0 8 8">
+          <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" transform="rotate(45 4 4)" />
+        </svg>
+        ბიზნეს მოგზაურობა
+      </div>
+      <div class="ticker-item">
+        <svg class="tdot" viewBox="0 0 8 8">
+          <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" transform="rotate(45 4 4)" />
+        </svg>
+        ტრანსფერი
+      </div>
+      <div class="ticker-item">
+        <svg class="tdot" viewBox="0 0 8 8">
+          <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" transform="rotate(45 4 4)" />
+        </svg>
+        MICE სერვისი
+      </div>
+      <div class="ticker-item">
+        <svg class="tdot" viewBox="0 0 8 8">
+          <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" transform="rotate(45 4 4)" />
+        </svg>
+        ჯგუფური ტური
+      </div>
+      <div class="ticker-item">
+        <svg class="tdot" viewBox="0 0 8 8">
+          <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" transform="rotate(45 4 4)" />
+        </svg>
+        ვიზა &amp; დაზღვევა
+      </div>
+      <div class="ticker-item">
+        <svg class="tdot" viewBox="0 0 8 8">
+          <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" transform="rotate(45 4 4)" />
+        </svg>
+        ბიზნეს კლასი
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SERVICES ── -->
+  <section class="section services" id="services">
+    <div class="section-head fade-in">
+      <h2>კორპორატიული მოგზაურობის<br />ერთიანი ინფრასტრუქტურა</h2>
+      <p>ერთიანი B2B სისტემა ავიაბილეთებისთვის, სასტუმროებისთვის, ფინანსური კონტროლისთვის და თანამშრომელთა სამგზავრო პროცესების სამართავად.</p>
+    </div>
+    <div class="svc-grid">
+
+      <div class="svc-card fade-in">
+        <div class="svc-icon-box">
+          <!-- airplane -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+          </svg>
+        </div>
+        <h3>კორპორატიული ავიაბილეთები</h3>
+        <p>საერთაშორისო და ლოკალური ავიაკომპანიების სრული წვდომა. მოქნილი ტარიფები, ბიზნეს კლასის მხარდაჭერა, სწრაფი გაცვლა და გამოყოფილი B2B მენეჯერი.</p>
+        <a href="#contact" class="svc-link">მიიღეთ შეთავაზება
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 8h10M9 4l4 4-4 4" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="svc-card fade-in">
+        <div class="svc-icon-box">
+          <!-- building / hotel -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="1" />
+            <path d="M3 9h18M9 21V9M7 6h1M11 6h1M15 6h1M13 14h2v7h-2z" />
+          </svg>
+        </div>
+        <h3>სასტუმროები & განთავსება</h3>
+        <p>კორპორატიული ტარიფები მსოფლიოს მასშტაბით. ცენტრალიზებული ჯავშნები, ინვოისები და თანამშრომელთა განთავსების სრული კონტროლი.</p>
+        <a href="#contact" class="svc-link">მიიღეთ შეთავაზება
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 8h10M9 4l4 4-4 4" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="svc-card fade-in">
+        <div class="svc-icon-box">
+          <!-- car -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M5 17H3v-5l2-5h14l2 5v5h-2M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0z" />
+            <path d="M5 12h14" />
+          </svg>
+        </div>
+        <h3>ტრანსფერი & Executive Service</h3>
+        <p>აეროპორტის ტრანსფერი, VIP მომსახურება და ჯგუფური გადაადგილება. საერთაშორისო პარტნიორული ქსელი ბიზნეს კლიენტებისთვის.</p>
+        <a href="#contact" class="svc-link">მიიღეთ შეთავაზება
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 8h10M9 4l4 4-4 4" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="svc-card fade-in">
+        <div class="svc-icon-box">
+          <!-- document -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+          </svg>
+        </div>
+        <h3>ვიზა & დოკუმენტაცია</h3>
+        <p>ვიზის გაფორმება, სადაზღვევო პაკეტი, ნოტარიული მომსახურება — სრული მხარდაჭერა.</p>
+        <a href="#contact" class="svc-link">მიიღეთ შეთავაზება
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 8h10M9 4l4 4-4 4" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="svc-card fade-in">
+        <div class="svc-icon-box">
+          <!-- briefcase / MICE -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" />
+            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2M12 12v4M10 14h4" />
+          </svg>
+        </div>
+        <h3>MICE & ბიზნეს ღონისძიება</h3>
+        <p>კონფერენციები, ტრეინინგები, ტიმ-ბილდინგი. სასტუმრო, ლოჯისტიკა, სრული ორგანიზება.</p>
+        <a href="#contact" class="svc-link">მიიღეთ შეთავაზება
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 8h10M9 4l4 4-4 4" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="svc-card fade-in">
+        <div class="svc-icon-box">
+          <!-- bar chart -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M18 20V10M12 20V4M6 20v-6" />
+          </svg>
+        </div>
+        <h3>ფინანსური კონტროლი & ანგარიშგება</h3>
+        <p>ერთიანი ინვოისები, ბიუჯეტის კონტროლი, დეპარტამენტების მიხედვით ხარჯების ანალიზი და ყოველთვიური ფინანსური რეპორტები.</p>
+        <a href="#contact" class="svc-link">მიიღეთ შეთავაზება
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 8h10M9 4l4 4-4 4" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ── -->
+  <section class="how-section">
+    <div class="how-inner">
+      <div class="how-head fade-in">
+        <h2>როგორ მუშაობს<br />MATARE B2B</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step fade-in">
+          <div class="step-num">01</div>
+          <h3>ბიზნეს საჭიროებების ანალიზი</h3>
+          <p>ვაანალიზებთ კომპანიის მოგზაურობის მოცულობას, მიმართულებებს, ბიუჯეტს და შიდა პროცესებს.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-num">02</div>
+          <h3>B2B სისტემის გააქტიურება</h3>
+          <p>იქმნება კორპორატიული პროფილი, მომხმარებლები და ინდივიდუალური სამგზავრო პოლიტიკა.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-num">03</div>
+          <h3>დაჯავშნები & მხარდაჭერა</h3>
+          <p>ბილეთები, სასტუმროები, ვიზები და ტრანსფერები იმართება ერთიანი საკომუნიკაციო არხით.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-num">04</div>
+          <h3>ანგარიშგება & ოპტიმიზაცია</h3>
+          <p>იღებთ დეტალურ ფინანსურ ანალიზს, ხარჯების კონტროლს და სამოგზაურო პროცესების ოპტიმიზაციის რეკომენდაციებს.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONSULTATION SECTION ── -->
+  <section class="consultation-section section" id="consultation">
+    <div class="consultation-inner fade-in">
+      <h2>MATARE B2B CRM<br />კონტროლის ცენტრი</h2>
+      <p>MATARE CRM აერთიანებს კორპორატიულ ჯავშნებს, ინვოისებს, თანამშრომლების მართვას და სამოგზაურო ანალიტიკას ერთ პლატფორმაში. თითოეული დეპარტამენტი, ბიუჯეტი და მგზავრობა კონტროლდება რეალურ დროში.</p>
+
+      <div class="crm-mockup fade-in visible">
+        <!-- Sidebar -->
+        <aside class="crm-sidebar">
+          <div class="crm-sidebar-head">
+            <div class="crm-logo">
+              <span class="crm-logo-mark">M</span>
+              <span class="crm-logo-text">Matare.ge <em>CRM</em></span>
+            </div>
+          </div>
+          <nav class="crm-nav">
+            <a class="crm-nav-item">დაშბორდი</a>
+            <a class="crm-nav-item">ბიზნეს ჯავშნები</a>
+            <a class="crm-nav-item">მგზავრები</a>
+            <a class="crm-nav-item">ინვოისები</a>
+            <a class="crm-nav-item">გადახდები</a>
+            <a class="crm-nav-item">ხელშეკრულებები</a>
+            <a class="crm-nav-item">ანალიტიკა</a>
+            <a class="crm-nav-item">პარამეტრები</a>
+          </nav>
+        </aside>
+
+        <!-- Main panel -->
+        <div class="crm-main">
+          <header class="crm-topbar">
+            <div class="crm-brand-min">test company CRM</div>
+            <div class="crm-topbar-actions">
+              <div class="crm-search"><span></span> ძებნა</div>
+              <div class="crm-avatar">Ma</div>
+            </div>
+          </header>
+
+          <h3 class="crm-section-title">შეკვეთები</h3>
+
+          <div class="crm-stats">
+            <div class="crm-stat">
+              <div class="crm-stat-label">სულ შეკვეთები</div>
+              <div class="crm-stat-value">29</div>
+              <svg class="crm-spark" viewBox="0 0 120 28" preserveAspectRatio="none">
+                <path d="M0 18 Q15 10 30 16 T60 14 T90 18 T120 12" stroke="#3b82f6" stroke-width="2" fill="none" />
+                <path d="M0 18 Q15 10 30 16 T60 14 T90 18 T120 12 L120 28 L0 28 Z" fill="rgba(59,130,246,0.12)"
+                  stroke="none" />
+              </svg>
+            </div>
+            <div class="crm-stat">
+              <div class="crm-stat-label">შეკვეთების ბრუნვა</div>
+              <div class="crm-stat-value">25,553.16</div>
+              <svg class="crm-spark" viewBox="0 0 120 28" preserveAspectRatio="none">
+                <path d="M0 20 Q15 12 30 18 T60 10 T90 14 T120 8" stroke="#22c55e" stroke-width="2" fill="none" />
+                <path d="M0 20 Q15 12 30 18 T60 10 T90 14 T120 8 L120 28 L0 28 Z" fill="rgba(34,197,94,0.14)"
+                  stroke="none" />
+              </svg>
+            </div>
+            <div class="crm-stat">
+              <div class="crm-stat-label">შეკვეთების ხარჯი</div>
+              <div class="crm-stat-value">19,858.40</div>
+              <svg class="crm-spark" viewBox="0 0 120 28" preserveAspectRatio="none">
+                <path d="M0 14 Q15 20 30 12 T60 18 T90 10 T120 16" stroke="#ef4444" stroke-width="2" fill="none" />
+                <path d="M0 14 Q15 20 30 12 T60 18 T90 10 T120 16 L120 28 L0 28 Z" fill="rgba(239,68,68,0.14)"
+                  stroke="none" />
+              </svg>
+            </div>
+            <div class="crm-stat">
+              <div class="crm-stat-label">ინვოისები</div>
+              <div class="crm-stat-value">5,694.76</div>
+              <svg class="crm-spark" viewBox="0 0 120 28" preserveAspectRatio="none">
+                <path d="M0 18 Q15 14 30 16 T60 10 T90 14 T120 8" stroke="#6366f1" stroke-width="2" fill="none" />
+                <path d="M0 18 Q15 14 30 16 T60 10 T90 14 T120 8 L120 28 L0 28 Z" fill="rgba(99,102,241,0.16)"
+                  stroke="none" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="crm-panel">
+            <div class="crm-panel-head">
+              <h4>მომავალი ჩექინები</h4>
+            </div>
+            <div class="crm-panel-toolbar">
+              <div class="crm-search sm"><span></span> ძებნა</div>
+            </div>
+            <div class="crm-table">
+              <div class="crm-row crm-row-head">
+                <div>PNR</div>
+                <div>მგზავრი</div>
+                <div>ავიაკომპანია</div>
+                <div>საიდან</div>
+                <div>სად</div>
+                <div>დრო</div>
+              </div>
+              <div class="crm-row">
+                <div class="mono">ON7UNJ</div>
+                <div>test passenger</div>
+                <div>Wizz Air</div>
+                <div>KUT</div>
+                <div>BCN</div>
+                <div>26-05-2026 00:00</div>
+              </div>
+              <div class="crm-row">
+                <div class="mono">CWSTTD</div>
+                <div>test passenger</div>
+                <div>Wizz Air</div>
+                <div>POZ</div>
+                <div>KUT</div>
+                <div>26-05-2026 11:15</div>
+              </div>
+              <div class="crm-row">
+                <div class="mono">JKR42P</div>
+                <div>test passenger</div>
+                <div>Turkish A.</div>
+                <div>TBS</div>
+                <div>IST</div>
+                <div>27-05-2026 06:40</div>
+              </div>
+              <div class="crm-row">
+                <div class="mono">QMX8WL</div>
+                <div>test passenger</div>
+                <div>Lufthansa</div>
+                <div>TBS</div>
+                <div>FRA</div>
+                <div>28-05-2026 14:25</div>
+              </div>
+            </div>
+            <div class="crm-pagi">
+              <span>გვერდზე</span>
+              <span class="crm-select">10 ▾</span>
+            </div>
+          </div>
+
+          <div class="crm-panel">
+            <div class="crm-panel-head">
+              <h4>ინვოისები</h4>
+            </div>
+            <div class="crm-panel-toolbar">
+              <div class="crm-search sm"><span></span> ძებნა</div>
+            </div>
+            <div class="crm-table crm-table-inv">
+              <div class="crm-row crm-row-head">
+                <div>№</div>
+                <div>კომპანია</div>
+                <div>თანხა</div>
+                <div>თარიღი</div>
+                <div>სტატუსი</div>
+              </div>
+              <div class="crm-row">
+                <div class="mono">INV-2026-0142</div>
+                <div>test company</div>
+                <div>8,420.00 ₾</div>
+                <div>22-05-2026</div>
+                <div><span class="crm-pill ok">გადახდილი</span></div>
+              </div>
+              <div class="crm-row">
+                <div class="mono">INV-2026-0141</div>
+                <div>test company</div>
+                <div>12,180.50 ₾</div>
+                <div>21-05-2026</div>
+                <div><span class="crm-pill wait">მოლოდინში</span></div>
+              </div>
+              <div class="crm-row">
+                <div class="mono">INV-2026-0140</div>
+                <div>test company</div>
+                <div>4,260.00 ₾</div>
+                <div>19-05-2026</div>
+                <div><span class="crm-pill ok">გადახდილი</span></div>
+              </div>
+              <div class="crm-row">
+                <div class="mono">INV-2026-0139</div>
+                <div>test company</div>
+                <div>6,890.00 ₾</div>
+                <div>14-05-2026</div>
+                <div><span class="crm-pill late">ვადაგადაცილებული</span></div>
+              </div>
+              <div class="crm-row">
+                <div class="mono">INV-2026-0138</div>
+                <div>test company</div>
+                <div>9,500.00 ₾</div>
+                <div>12-05-2026</div>
+                <div><span class="crm-pill ok">გადახდილი</span></div>
+              </div>
+            </div>
+            <div class="crm-pagi">
+              <span>გვერდზე</span>
+              <span class="crm-select">10 ▾</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TRUST SECTION ── -->
+  <section class="section trust-section">
+    <div class="section-head fade-in">
+      <h2>რატომ ირჩევენ კომპანიები<br />MATARE B2B-ს</h2>
+      <p>სრული კონტროლი, სწრაფი მხარდაჭერა და ბიზნეს მოგზაურობის ოპტიმიზაცია ერთ სისტემაში.</p>
+    </div>
+    <div class="svc-grid">
+
+      <div class="svc-card fade-in">
+        <div class="svc-icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        </div>
+        <h3>Dedicated Account Manager</h3>
+        <p>თითოეულ კომპანიას ემსახურება გამოყოფილი B2B მენეჯერი სწრაფი რეაგირებით და მუდმივი კომუნიკაციით.</p>
+      </div>
+
+      <div class="svc-card fade-in">
+        <div class="svc-icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg>
+        </div>
+        <h3>24/7 მხარდაჭერა</h3>
+        <p>ფრენის ცვლილება, გაუქმება ან გადაუდებელი მოთხოვნა მუშავდება ნებისმიერ დროს.</p>
+      </div>
+
+      <div class="svc-card fade-in">
+        <div class="svc-icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+          </svg>
+        </div>
+        <h3>ფინანსური გამჭვირვალობა</h3>
+        <p>ყველა ხარჯი, ინვოისი და დეპარტამენტის ბიუჯეტი ხელმისაწვდომია ერთ სივრცეში.</p>
+      </div>
+
+      <div class="svc-card fade-in">
+        <div class="svc-icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 11l3 3L22 4" />
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+          </svg>
+        </div>
+        <h3>Travel Policy Control</h3>
+        <p>კომპანიის შიდა სამოგზაურო პოლიტიკის კონტროლი და თანამშრომელთა პროცესების სტანდარტიზაცია.</p>
+      </div>
+
+      <div class="svc-card fade-in">
+        <div class="svc-icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+          </svg>
+        </div>
+        <h3>სწრაფი ბუქინგი</h3>
+        <p>ბილეთების და სასტუმროების დამუშავება მოკლე დროში — მინიმალური ბიუროკრატიით.</p>
+      </div>
+
+      <div class="svc-card fade-in">
+        <div class="svc-icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" />
+          </svg>
+        </div>
+        <h3>გლობალური პარტნიორული ქსელი</h3>
+        <p>საერთაშორისო ავიაკომპანიები, სასტუმროები და ტრანსპორტის პარტნიორები ერთ სისტემაში.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ── PARTNERS ── -->
+  <div class="partners-bar fade-in">
+    <div class="partners-head">
+      <span class="partners-label">სანდო პარტნიორები</span>
+    </div>
+    <div class="partners-logos">
+      <span class="plogo"><em>✈</em> Georgian Airways</span>
+      <span class="plogo"><em>✈</em> Turkish Airlines</span>
+      <span class="plogo"><em>✈</em> Emirates</span>
+      <span class="plogo"><em>✈</em> Lufthansa</span>
+      <span class="plogo"><em>★</em> Marriott</span>
+      <span class="plogo"><em>★</em> Hilton</span>
+      <span class="plogo"><em>★</em> Radisson</span>
+      <span class="plogo"><em>★</em> Accor</span>
+    </div>
+  </div>
+
+  <!-- ── CONTACT ── -->
+  <section class="contact-section section" id="contact">
+    <div class="contact-grid">
+      <div class="contact-left fade-in">
+        <h2>დავიწყოთ<br />თანამშრომლობა</h2>
+        <p>შეავსეთ ფორმა — ჩვენი გუნდი 24 საათში დაგიკავშირდებათ ინდივიდუალური შეთავაზებით.</p>
+        <div class="contact-info">
+          <div class="cinfo-row">
+            <span class="cinfo-icon">
+              <!-- envelope -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="M2 7l10 7 10-7" />
+              </svg>
+            </span>
+            <div>
+              <strong>info@b2b.ge</strong>
+              <span>ელ-ფოსტა</span>
+            </div>
+          </div>
+          <div class="cinfo-row">
+            <span class="cinfo-icon">
+              <!-- phone -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </span>
+            <div>
+              <strong>+995 322 000 000</strong>
+              <span>სამ. დღეები 09:00–20:00</span>
+            </div>
+          </div>
+          <div class="cinfo-row">
+            <span class="cinfo-icon">
+              <!-- map pin -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </span>
+            <div>
+              <strong>თბილისი, საქართველო</strong>
+              <span>ილია ჭავჭავაძის გამზ. 60</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="newsletter-section section" id="newsletter">
+        <div class="newsletter-inner fade-in">
+          <h2 class="newsletter-title">იყავით ინფორმირებული —<br /><span>ბიზნეს მოგზაურობას სამყაროში</span></h2>
+          <p class="newsletter-desc">
+            მიიღეთ ყოველთვიური სიახლეები: ახალი მარშრუტები, სპეციალური ტარიფები,
+            MICE შეთავაზებები და ბიზნეს მოგზაურობას ტრენდები — პირდაპირ თქვენს ელ-ფოსტაზე.
+          </p>
+          <div class="newsletter-form">
+            <div class="newsletter-input-wrap">
+              <svg class="newsletter-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="16" height="13" rx="2" />
+                <path d="M2 7l8 5 8-5" />
+              </svg>
+              <input type="email" class="newsletter-input" placeholder="კომპანიის ელ-ფოსტა..." />
+            </div>
+            <button class="btn-primary newsletter-btn">გამოწერა
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </button>
+          </div>
+          <p class="newsletter-note">სპამი არ გამოგეგზავნებათ. გამოწერის გაუქმება — ნებისმიერ დროს.</p>
+          <div class="newsletter-perks">
+            <div class="newsletter-perk">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M2 8l4 4 8-8" />
+              </svg>
+              სპეც. ტარიფები
+            </div>
+            <div class="newsletter-perk">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M2 8l4 4 8-8" />
+              </svg>
+              ახალი მარშრუტები
+            </div>
+            <div class="newsletter-perk">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M2 8l4 4 8-8" />
+              </svg>
+              ინდ. რჩევები
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+  </section>
+
+  <!-- ──  b2b-section ── -->
+  <section class="b2b-section section" id="b2b-payment">
+    <div class="b2b-inner">
+      <div class="section-header fade-in">
+        <h2>გადახდის მოქნილი პირობები<br />თქვენი ბიზნესისთვის</h2>
+        <p>ჩვენ ვიცით, რომ თითოეულ კომპანიას ინდივიდუალური ფინანსური ციკლი აქვს. სწორედ ამიტომ, B2B პარტნიორებს ვთავაზობთ ანგარიშსწორების 4 განსხვავებულ მოდელს.</p>
+      </div>
+
+      <div class="tabs-container fade-in">
+        <div class="tabs-menu" role="tablist">
+          <button class="tab-btn active" role="tab" aria-selected="true" data-tab="tab1">
+            <span class="tab-icon">💳</span> მყისიერი ჩარიცხვა
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab2">
+            <span class="tab-icon">💰</span> დეპოზიტური სისტემა
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab3">
+            <span class="tab-icon">📈</span> საკრედიტო ლიმიტი
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab4">
+            <span class="tab-icon">📅</span> პერიოდული გრაფიკი
+          </button>
+        </div>
+
+        <div class="tabs-content">
+          <div class="tab-panel active" id="tab1" role="tabpanel">
+            <h3 class="panel-title">მყისიერი ანგარიშსწორება <span class="panel-tag">Pay-as-you-go</span></h3>
+            <p class="panel-description">სტანდარტული და ყველაზე მარტივი მოდელი. თითოეული კონკრეტული სერვისის ან ტურის შეძენა ხდება ადგილზე, პირდაპირი საბანკო ჩარიცხვით, ყოველი შესყიდვის მოთხოვნისას.</p>
+            <div class="audience-box">
+              <strong>ვისთვის არის:</strong>
+              <p>იდეალურია იმ კომპანიებისთვის, რომლებიც პერიოდულად ან იშვიათად სარგებლობენ ტურისტული სერვისებით.</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab2" role="tabpanel">
+            <h3 class="panel-title">დეპოზიტური სისტემა <span class="panel-tag">Pre-paid</span></h3>
+            <p class="panel-description">თქვენ წინასწარ რიცხავთ სასურველი ოდენობის თანხას თქვენს ბალანსზე, ხოლო შემდგომი შესყიდვებისას მომსახურების ღირებულება ავტომატურად აკლდება ამ დეპოზიტს პერიოდული ათვისებით.</p>
+            <div class="audience-box">
+              <strong>ვისთვის არის:</strong>
+              <p>კომპანიებისთვის, რომელთაც სურთ ფინანსური პროცესების ოპტიმიზაცია, ბუღალტერიის გამარტივება და ყოველ ჯერზე ინვოისების გამოწერის თავიდან აცილება.</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab3" role="tabpanel">
+            <h3 class="panel-title">საკრედიტო ლიმიტი <span class="panel-tag">Post-paid Credit</span></h3>
+            <p class="panel-description">ჩვენ უზრუნველყოფთ სერვისების შეძენას თქვენთვის, თქვენ კი სარგებლობთ წინასწარ შეთანხმებული საკრედიტო ლიმიტით. ლიმიტის მაქსიმალურ ნიშნულამდე მიღწევისას ხდება ჯამური თანხის ერთიანად ჩარიცხვა.</p>
+            <div class="audience-box">
+              <strong>ვისთვის არის:</strong>
+              <p>აქტიური პარტნიორებისთვის, რომელთაც აქვთ სტაბილური, მაღალი ბრუნვა და სჭირდებათ მუდმივი ფინანსური მოქნილობა.</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab4" role="tabpanel">
+            <h3 class="panel-title">პერიოდული გრაფიკი <span class="panel-tag">Scheduled Payouts</span></h3>
+            <p class="panel-description">ჩვენ ვახორციელებთ ჯავშნებსა და შესყიდვებს თქვენი მოთხოვნის შესაბამისად, ხოლო ანგარიშსწორება და დაგროვილი თანხის დაფარვა ხდება თვეში რამდენჯერმე, წინასწარ შეთანხმებულ კონკრეტულ თარიღებში.</p>
+            <div class="audience-box">
+              <strong>ვისთვის არის:</strong>
+              <p>მსხვილი ბიზნესებისთვის, რომელთა ბუღალტერიაც მიბმულია კონკრეტულ შიდასახელმწიფოებრივ ფინანსურ კალენდარსა და რეპორტინგის პერიოდებზე.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-block fade-in">
+        <p>გსურთ ინდივიდუალური პირობების განხილვა და პარტნიორობა?</p>
+        <a href="#contact" class="cta-btn">დაგვიკავშირდით</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SEO TEXT ── -->
+  <section class="seo-section">
+    <div class="seo-inner">
+      <h2>ბიზნეს მოგზაურობის მართვა საქართველოში</h2>
+      <div class="seo-cols">
+        <div class="seo-col">
+          <h3>ბიზნეს მოგზაურობის მართვა — რა გულისხმობს?</h3>
+          <p>
+            ბიზნეს მოგზაურობის მართვა (Corporate Travel Management) გულისხმობს
+            ერთიან სისტემას, რომელიც კომპანიის ყველა მგზავრობას — ავიაბილეთებიდან
+            სასტუმრომდე, ვიზიდან ტრანსფერამდე — ცენტრალიზებულად აკონტროლებს.
+            ეს არქიტექტურა განსაკუთრებით ეფექტურია იმ ორგანიზაციებისთვის,
+            რომელთა თანამშრომლები რეგულარულად მგზავრობენ ან რომელთა ფინანსურ
+            განყოფილებას სჭირდება ხარჯების სრული გამჭვირვალობა.
+          </p>
+          <p>
+            MATARE.GE B2B საქართველოში ერთ-ერთი წამყვანი ბიზნეს მოგზაურობის
+            მართვის პლათფორმაა. ჩვენი სისტემა უზრუნველყოფს ბიუჯეტის ოპტიმიზაციას,
+            ხელშეკრულებიდან გამომდინარე ტარიფებს და სრულ ოპერაციულ კოორდინაციას.
+          </p>
+        </div>
+        <div class="seo-col">
+          <h3>ხელშეკრულებიდან გამომდინარე ტარიფი — რა გავლენა აქვს?</h3>
+          <p>
+            ბიზნეს ტარიფი წინასწარ შეთანხმებული კონტრაქტითაა განსაზღვრული
+            ავიაკომპანიასთან. შედეგი — სტანდარტულთან შედარებით დაბალი ფასი,
+            პრიორიტეტული ჯავშანი, მოქნილი ცვლილების პოლიტიკა და კონსოლიდირებული
+            ლოიალობის ბენეფიტები კომპანიის დონეზე.
+          </p>
+          <p>
+            MATARE CRM ავტომატურად ადარებს ყველა ხელმისაწვდომ ტარიფს
+            და გვთავაზობს ოპტიმალურ ვარიანტს. ყოველი ჯავშნისთვის
+            შესაბამისი ანგ.-ფაქტურა და ანგარიში გენერირდება ერთიან სისტემაში.
+          </p>
+        </div>
+        <div class="seo-col">
+          <h3>MICE & ბიზნეს ღონისძიებები</h3>
+          <p>
+            MICE (Meetings, Incentives, Conferences, Exhibitions) მართვა
+            მოიცავს ბიზნეს ღონისძიების სრულ ლოგისტიკურ კოორდინაციას —
+            კონფერენცია-ოთახის ჯავშანი, ტრანსფერი, კეტერინგი და ტექნ.
+            მხარდაჭერა — ერთიანი ექაუნთ მენეჯერის მართვით.
+          </p>
+          <p>
+            თბილისი თანდათან ხდება რეგიონალური MICE დესტინაცია. MATARE
+            თანამშრომლობს საქართველოს წამყვან სასტუმრო ქსელებთან და
+            უზრუნველყოფს ღონისძიების სრულ ოპერაციულ მართვას —
+            10-დან 1000-ზე მეტ მონაწილემდე.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabButtons = document.querySelectorAll('.b2b-section .tab-btn');
+      const tabPanels = document.querySelectorAll('.b2b-section .tab-panel');
+
+      tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          tabButtons.forEach(btn => {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+          });
+          tabPanels.forEach(panel => panel.classList.remove('active'));
+
+          button.classList.add('active');
+          button.setAttribute('aria-selected', 'true');
+
+          const targetTabId = button.getAttribute('data-tab');
+          const targetPanel = document.getElementById(targetTabId);
+          if (targetPanel) targetPanel.classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
